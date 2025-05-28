@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>n8n Automation for Digicel - Interactive Report</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        margin: 0;
+        display: flex;
+        background: #f4f4f4;
+         line-height: 1.3;
+      }
+
+      nav {
+          width: 250px;
+          background: #df1783;
+          color: white;
+          height: 100vh;
+          padding: 20px;
+          position: fixed;
+          font-size: 20px;
+      }
+
+      nav h2 {
+          font-size: 38px;
+          color: white;
+      }
+
+      nav a {
+          display: block;
+          color: white;
+          margin: 10px 0;
+          text-decoration: none;
+          transition: 0.3s;
+      }
+
+      nav a:hover {
+          color: yellow;
+      }
+
+      .main-content {
+          margin-left: 270px;
+          padding: 40px;
+          flex-grow: 1;
+      }
+
+      section {
+          background: white;
+          padding: 20px;
+          border-radius: 8px;
+          margin-bottom: 30px;
+          box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      }
+      
+      
+      
+      section#intro ul {
+          line-height: 1.8;
+          font-size: 16px;
+      }
+      
+      
+      
+
+      section#features ul {
+          line-height: 1.8;
+          font-size: 16px;
+      }
+      
+      
+      .logo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.logo-grid img {
+  max-width: 100px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo-grid img:hover {
+  transform: scale(1.1);
+}
+      
+      
+
+      .collapsible {
+          background-color: #eee;
+          cursor: pointer;
+          padding: 15px;
+          width: 100%;
+          border: none;
+          text-align: left;
+          outline: none;
+          font-size: 18px;
+      }
+
+      .active, .collapsible:hover {
+          background-color: #ccc;
+      }
+
+      .content {
+          padding: 0 18px;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.2s ease-out;
+          background-color: #f9f9f9;
+      }
+      
+      
+      
+
+      button {
+          background-color: #b0ff2b;
+          border: none;
+          padding: 10px 20px;
+          font-weight: bold;
+          border-radius: 5px;
+          cursor: pointer;
+          margin-top: 15px;
+      }
+
+      button:hover {
+          background-color: #9be91c;
+      }
+      
+      
+
+      h1, h2 {
+          color: #333;
+      }
+
+      iframe {
+          width: 100%;
+          height: 400px;
+          border: none;
+          margin-top: 20px;
+      }
+
+      canvas {
+          max-width: 100%;
+          margin-top: 20px;
+      }
+      
+      
+      
+      
+      
+    </style>
+    </head>
+
+    <body>
+        <nav>
+            <div style="text-align: center;">
+                <img src="https://bucket.mlcdn.com/a/3336/3336910/images/5165da47eede5f06d2f185e3ad6100c67e2986df.gif" alt="Company Logo" style="width: 170px; margin-bottom: 20px;">
+            </div>
+            <h2>AI-Powered Automation: Agents & Standalone Systems</h2>
+            <a href="#intro">• Intro</a>
+            <a href="#features">• Core Features</a>
+            <a href="#usecases">• Telecom Use Cases</a>
+            <a href="#digicel">• Digicel Strategy</a>
+            <a href="#video">• Explainer Video</a>
+            <a href="#charts">• Interactive Dashboard</a>
+            <a href="#chat">• LLM Chatbot</a>
+        </nav>
+        
+        
+
+        <div class="main-content">
+            
+            <section id="intro">
+  <iframe src="https://gamma.app/embed/v48spvfuiolvp9i" 
+          style="width: 700px; max-width: 100%; height: 450px;" 
+          allow="fullscreen" 
+          title="AI-Powered Automation as a Service"></iframe>
+  
+  <h1>What Is An AI Automation System?</h1>
+  <p>An AI Automation System is a solution that combines Artificial Intelligence (AI) with automation tools to complete tasks, make decisions, and improve workflows without constant human intervention.</p>
+  
+  <h2>“Fair-Code” Workflow Automation Platform</h2>
+  <p>We use top edge automation platform with “native AI capabilities” for embedding language models and AI logic into workflows.</p>
+  <p>We leverage a cutting-edge automation platform with native AI integration, allowing us to:
+</p>
+<div>
+  <ul>
+       <li>Embed advanced language models directly into your workflows
+</li>
+<li>Automate intelligent decision-making without compromising data security
+</li>
+<li>Create future-ready systems that evolve with your business needs
+</li>
+</u>
+</div>
+  <div>
+  <button class="collapsible">🚀 Why It Matters</button>
+  <div class="content">
+    <p>With 400+ integrations and AI capabilities, you can simplify automating complex workflows across telecom, support, finance, and IT ops — all while preserving data control.</p>
+  </div>
+
+  <button class="collapsible">🧠 What Does It Do?</button>
+  <div class="content">
+    <p>It uses AI to:</p>
+    <ul>
+      <li>Understand data (e.g., natural language, images, user behavior)</li>
+      <li>Decide what to do next (based on rules, predictions, or learning)</li>
+      <li>Act by performing automated tasks (send emails, reply to customers, generate reports, etc.)</li>
+    </ul>
+  </div>
+  </div>
+</section>
+
+            <section id="features">
+                <h2>Core Features</h2>
+                <ul>
+                    <li>⚙️ Visual low-code interface</li>
+                    <li>🤖 LLM Integration (OpenAI, Deepseek, Anthropic, HuggingFace, Perplexity, & more)</li>
+                    <li>🔗 400+ SaaS/API connectors</li>
+                    <li>🧠 Agent workflows with vector search</li>
+                    <li>🔐 Self-hosted or managed cloud</li>
+                </ul>
+            </section>
+            
+            
+   <section id="llm-showcase">
+  <h2>LLM Integration Showcase</h2>
+  <p>These are some of the leading Large Language Model platforms supported by our AI Automation workflows:</p>
+  
+  <div class="logo-grid">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg" alt="OpenAI">
+    <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face">
+    <img src="https://seeklogo.com/images/A/anthropic-logo-12AC91B5E0-seeklogo.com.png" alt="Anthropic">
+    <img src="https://www.perplexity.ai/_next/image?url=%2Flogo.png&w=256&q=75" alt="Perplexity">
+    <img src="https://avatars.githubusercontent.com/u/130017739?s=200&v=4" alt="Deepseek">
+    <img src="https://seeklogo.com/images/M/meta-logo-31AE6A841E-seeklogo.com.png" alt="Meta AI">
+  </div>
+</section>         
+            
+            
+            
+            
+            
+            
+            
+
+            <section id="usecases">
+                <h2>Business Use Cases for Telecom</h2>
+                <button class="collapsible">Customer Support Automation</button>
+                <div class="content">
+                    <p>Deploy WhatsApp bots that use GPT to answer questions, crawl FAQs, and maintain chat memory. Integrate with Twilio and Supabase.<br>For instance, integrate Twilio/WhatsApp with an LLM node so incoming customer messages trigger GPT-powered responses. An <strong>AI Automation System</strong> can crawl FAQs on demand and maintain chat history (e.g. via a Postgres/Supabase memory) . The WhatsApp bot template demonstrates this (“AI employee” bot that crawls web content for answers) . Automating routine queries deflects tickets and frees support agents for high‑value tasks.</p>
+                </div>
+
+                <button class="collapsible">Billing & Finance Automation</button>
+                <div class="content">
+                    <p>Create invoices from CRM actions. Send reminders automatically. Link with Stripe or Invoiced.<br>For example, when a new subscription is provisioned, an <strong>AI Automation System</strong> can automatically create an invoice (via Invoiced or Stripe), email it to the customer, and log the transaction in accounting software . It can also trigger payment reminders or credit‑hold notifications based on real-time data. These automations eliminate manual invoicing and reduce late payments.</p>
+                </div>
+
+                <button class="collapsible">Churn Prediction</button>
+                <div class="content">
+                    <p>Use AI/ML models to predict customer churn based on CRM and billing data. Launch retention flows automatically. An <strong>AI Automation System</strong> can periodically pull data (e.g. from billing, CRM, network usage), call a predictive service (Python code or a cloud ML API), and tag high-risk accounts for retention campaigns. For instance, an AI node could score accounts by churn risk and then launch targeted offers. This tight integration ensures insights directly drive action.</p>
+                </div>
+                
+                
+   <button class="collapsible">Marketing Automation</button>
+                <div class="content">
+                    <p>Personalize campaigns by syncing data across channels. A telecom could use an <strong>AI Automation System</strong> to pull subscriber data from the CRM, feed it to a Generative AI to craft tailored SMS/email content, and then schedule campaigns via a marketing platform (e.g. Mautic, SendGrid). Dropsolid’s case shows a similar pattern: they sync their Drupal CRM to Mautic to auto-generate segmented email campaigns . n8n can also write campaign metrics into dashboards (e.g. pushing Mautic reports to Google Sheets/DataStudio ) for real-time analytics.</p>
+                </div>             
+                
+                
+       <button class="collapsible">Internal IT Operations</button>
+                <div class="content">
+                    <p>Automate employee and network workflows. For example, DeliveryHero used an AI automation workflow to handle account lockouts: when a manager approves a recovery request, the <strong>AI Automation System</strong> calls the Okta, Jira and Google APIs to unlock access. This cut the average unlock time from 35 to 20 minutes, saving ~200 work-hours per month . Similarly, Deda.Tech built an <strong>AI Automation System</strong> workflow that listens for JSON messages on RabbitMQ and automates VMware server provisioning in their ITSM system . Telcos could do likewise for user onboarding, license assignment, network-alert ticketing, or any routine ops task.</p>
+                </div>         
+                
+       <button class="collapsible">Content Creation & Distribution</button>
+                <div class="content">
+                    <p>Automate employee and network workflows. For example, DeliveryHero used an AI automation workflow to handle account lockouts: when a manager approves a recovery request, the <strong>AI Automation System</strong> calls the Okta, Jira and Google APIs to unlock access. This cut the average unlock time from 35 to 20 minutes, saving ~200 work-hours per month . Similarly, Deda.Tech built an <strong>AI Automation System</strong> workflow that listens for JSON messages on RabbitMQ and automates VMware server provisioning in their ITSM system . Telcos could do likewise for user onboarding, license assignment, network-alert ticketing, or any routine ops task.</p>
+                </div>          
+                
+                
+            </section>
+
+            <section id="digicel">
+                <h2>Implementation for Digicel</h2>
+                <p><strong>Partner:</strong> Bebell Digital Solutions will deploy n8n-based workflows for Digicel's processes.</p>
+                <button class="collapsible">Key Phases</button>
+                <div class="content">
+                    <ul>
+                        <li>🔧 Solution Design</li>
+                        <li>🔌 Integration & Development</li>
+                        <li>🛡️ Deployment & Security</li>
+                        <li>📊 Monitoring & Maintenance</li>
+                        <li>👨‍🏫 Training & Handover</li>
+                    </ul>
+                </div>
+                <button class="collapsible">Why Bebell?</button>
+                <div class="content">
+                    <p>Bebell provides turnkey automation-as-a-service. We handle architecture, coding, cloud or local deployment, updates, and staff onboarding. Digicel gets fast ROI with low internal load.</p>
+                </div>
+            </section>
+
+            <section id="video">
+                <h2>Explainer Video</h2>
+                <iframe src="https://www.youtube.com/embed/vO2wqHzuF5I" title="Explainer Video"></iframe>
+            </section>
+
+            <section id="charts">
+                <h2>Interactive Dashboard</h2>
+                <canvas id="useCaseChart"></canvas>
+            </section>
+            
+            
+            
+            
+            
+
+            <section id="chat">
+                <h2>Live Chatbot Demo</h2>
+                <p>We've trained a Demo AI Assistant trained with public and general information on Digicel that can check calendar for schedule availability, book appointments and send email confirmation. <strong>Try it out 👇</strong></p>
+                <iframe src="https://your-llm-chatbot-demo-url.com"></iframe>
+            </section>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+
+        <script>
+            const collapsibles = document.querySelectorAll(".collapsible");
+            collapsibles.forEach(btn => {
+                btn.addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    let content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            });
+
+            const ctx = document.getElementById('useCaseChart');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Customer Support', 'Billing', 'Churn', 'Marketing', 'IT Ops'],
+                    datasets: [{
+                        label: 'Workflow Impact Score',
+                        data: [85, 75, 65, 60, 80],
+                        backgroundColor: '#df1783'
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: { beginAtZero: true }
+                    }
+                }
+            });
+        </script>
+
+    </body>
+</html>
