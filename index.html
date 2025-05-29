@@ -233,16 +233,53 @@
   border-radius: 5px;
   cursor: pointer;
 }
-
-
-    
+  
 .contact-card button:hover {
   background-color: #f1f1f1;
   color: #df1783;
 } 
    
    
-   
+
+ /* Ensure the video section has consistent width */
+#video {
+    max-width: 100%;       /* Adjust if your layout has a max-width (e.g., 1200px) */
+    width: 100%;
+    padding: 0 20px;       /* Match your site's container padding */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Download Button Styling */
+.download-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;          /* Fill the #video container */
+    max-width: 100%;       /* Prevent overflow */
+    padding: 15px 20px;
+    background: #df1783;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 15px;
+    box-sizing: border-box; /* Include padding in width */
+    transition: background 0.3s;
+}
+
+.download-btn:hover {
+    background: #a9298d;
+}
+
+.download-btn svg {
+    margin-left: 10px;
+}
+ 
+ 
+
+
+    
       
     </style>
     </head>
@@ -712,13 +749,22 @@
             
             
             
-            
-            
-
-            <section id="video">
-                <h2>Explainer Video</h2>
-                <iframe src="https://cdn.shopify.com/videos/c/o/v/84b27f42b333401294835716d2515fda.mp4" title="Explainer Video"></iframe>
-            </section>
+                       
+<section id="video">
+    <h2>Explainer Video</h2>
+    <iframe src="https://cdn.shopify.com/videos/c/o/v/84b27f42b333401294835716d2515fda.mp4" title="Explainer Video"></iframe>
+    
+    <!-- Download Button -->
+    <a href="YOUR_DOWNLOAD_URL_HERE" class="download-btn">
+        <span>Download Research Paper</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+    </a>
+    <br>
+</section>
             
             
             
