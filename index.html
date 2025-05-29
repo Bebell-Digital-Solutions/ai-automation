@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>n8n Automation for Digicel - Interactive Report</title>
+  <title>AI-Powered Automation Systems - Interactive Report by Bebell Digital Solutions.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
@@ -1047,80 +1047,125 @@
         </div>
         
 <script>
-  // Collapsible buttons
-  const collapsibles = document.querySelectorAll(".collapsible");
-  collapsibles.forEach(btn => {
-    btn.addEventListener("click", function () {
-      this.classList.toggle("active");
-      const content = this.nextElementSibling;
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-      } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-      }
+  // Wait for DOM to be fully loaded
+  document.addEventListener("DOMContentLoaded", function() {
+    
+    // 1. Collapsible buttons functionality
+    const collapsibles = document.querySelectorAll(".collapsible");
+    collapsibles.forEach(btn => {
+      btn.addEventListener("click", function() {
+        this.classList.toggle("active");
+        const content = this.nextElementSibling;
+        content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
+      });
+    });
+
+    // 2. Chart initialization
+    const ctx = document.getElementById('useCaseChart');
+    if (ctx) {
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: [
+            'Creative', 'Content', 'Production', 'Distribution', 'Admin',
+            'Operations', 'Intelligence', 'Marketing', 'Customer Service',
+            'Tech Support', 'Executive', 'E-Commerce', 'HR & Talent',
+            'Finance', 'Specialized Industry'
+          ],
+          datasets: [{
+            label: 'Workflow Impact Score',
+            data: [
+              90, 85, 80, 75, 70,
+              80, 75, 85, 70,
+              75, 90, 80, 75,
+              85, 80
+            ],
+            backgroundColor: '#df1783'
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              display: true,
+              position: 'top'
+            },
+            tooltip: {
+              callbacks: {
+                label: context => `${context.dataset.label}: ${context.parsed.y}/100`
+              }
+            }
+          },
+          scales: {
+            x: {
+              ticks: {
+                autoSkip: false,
+                maxRotation: 45,
+                minRotation: 45
+              }
+            },
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Impact Score (0–100)'
+              }
+            }
+          }
+        }
+      });
+    }
+
+    // 3. Back-to-Top Widget - Improved Version
+    const backToTop = document.createElement("div");
+    backToTop.id = "back-to-top";
+    backToTop.innerHTML = `
+      <img src="https://bucket.mlcdn.com/a/3336/3336910/images/3fbd37902ff101f2a2ade1b5e7ba9c1fdef689ca.png" 
+           alt="Back to Top" 
+           style="width:40px;height:40px;">`;
+    
+    // Apply styles via CSS class (better practice)
+    Object.assign(backToTop.style, {
+      position: "fixed",
+      bottom: "20px",
+      right: "20px",
+      display: "none",
+      cursor: "pointer",
+      zIndex: "9999",
+      transition: "opacity 0.3s"
+    });
+
+    document.body.appendChild(backToTop);
+
+    // Scroll handler with throttle for performance
+    let isScrolling;
+    window.addEventListener("scroll", function() {
+      window.clearTimeout(isScrolling);
+      isScrolling = setTimeout(() => {
+        const show = window.pageYOffset > 300;
+        backToTop.style.display = show ? "block" : "none";
+        backToTop.style.opacity = show ? "1" : "0";
+      }, 50);
+    });
+
+    // Smooth scroll to top
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
     });
   });
 
-
-
-
-  
-
-  // Updated Chart
-  const ctx = document.getElementById('useCaseChart');
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: [
-        'Creative', 'Content', 'Production', 'Distribution', 'Admin',
-        'Operations', 'Intelligence', 'Marketing', 'Customer Service',
-        'Tech Support', 'Executive', 'E-Commerce', 'HR & Talent',
-        'Finance', 'Specialized Industry'
-      ],
-      datasets: [{
-        label: 'Workflow Impact Score',
-        data: [
-          90, 85, 80, 75, 70,
-          80, 75, 85, 70,
-          75, 90, 80, 75,
-          85, 80
-        ],
-        backgroundColor: '#df1783'
-      }]
-    },
-    options: {
-      responsive: true,
-      plugins: {
-        legend: {
-          display: true,
-          position: 'top'
-        },
-        tooltip: {
-          callbacks: {
-            label: context => `${context.dataset.label}: ${context.parsed.y}/100`
-          }
-        }
-      },
-      scales: {
-        x: {
-          ticks: {
-            autoSkip: false,
-            maxRotation: 45,
-            minRotation: 45
-          }
-        },
-        y: {
-          beginAtZero: true,
-          title: {
-            display: true,
-            text: 'Impact Score (0–100)'
-          }
-        }
-      }
-    }
-  });
-  
+  // Chatbot configuration (can stay outside DOMContentLoaded)
+  window.chatpilotConfig = {
+    chatbotId: "dffeb15f02e54f87974a5a03fedae81a",
+    domain: "https://asistente.chatterbot.support"
+  };
 </script>
+
+<!-- Load chatbot script separately -->
+<script src="https://asistente.chatterbot.support/embed.min.js" charset="utf-8" defer></script>
 
 <br>
 
