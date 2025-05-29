@@ -21,11 +21,8 @@
           height: 100vh;
           padding: 20px;
           position: fixed;
-          font-size: 20px;
-        display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-      }
+          font-size: 18px;
+         }
 
       nav h2 {
           font-size: 38px;
@@ -43,22 +40,19 @@
       nav a:hover {
           color: yellow;
       }
-
-
-
-.nav-links {
-  flex-grow: 1;
-}
-
-.nav-footer {
+      
+      
+      
+     .nav-footer {
   font-size: 10px;
   color: white;
-  text-align: center;
+  text-align: left;
   padding-top: 30px;
   line-height: 1.4;
-}
-
-    
+} 
+      
+      
+      
 
       .main-content {
           margin-left: 270px;
@@ -90,6 +84,22 @@
       }
       
       
+      
+      
+      section#automation-suite ul {
+          line-height: 1.8;
+          font-size: 16px;
+      }
+      
+      
+      section#usecases ul {
+          line-height: 1.8;
+          font-size: 16px;
+      }
+      
+
+      
+      
       .logo-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -100,7 +110,7 @@
 }
 
 .logo-grid img {
-  max-width: 150px;
+  max-width: 250px;
   height: auto;
   transition: transform 0.3s ease;
 }
@@ -110,7 +120,8 @@
 }
       
       
-  
+ 
+      
 
       .collapsible {
           background-color: #eee;
@@ -122,10 +133,16 @@
           outline: none;
           font-size: 18px;
       }
+      
+      
 
       .active, .collapsible:hover {
           background-color: #ccc;
       }
+      
+      
+      
+      
 
       .content {
           padding: 0 18px;
@@ -158,8 +175,6 @@
           color: #333;
       }
 
-
-    
       iframe {
     width: 100%;
     aspect-ratio: 16/9; /* Adjust this (e.g., 4/3, 1/1, or your custom ratio) */
@@ -168,7 +183,6 @@
     border-radius: 6px;
 }
 
-    
 
       canvas {
           max-width: 100%;
@@ -184,8 +198,6 @@
   margin-top: 30px;
 }
 
-
-    
 .contact-card {
   text-align: center;
   background: white;
@@ -194,7 +206,6 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-    
 .zoom-img {
   width: 70px;
   height: 70px;
@@ -202,13 +213,10 @@
   margin-bottom: 15px;
 }
 
-    
 .zoom-img:hover {
   transform: scale(1.2);
 }
 
-
-    
 .contact-card h3 {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -216,14 +224,12 @@
   color: #333;
 }
 
-    
 .contact-card p {
   font-size: 14px;
   color: #555;
   margin-bottom: 15px;
 }
 
-    
 .contact-card button {
   background-color: #df1783;
   color: white;
@@ -233,14 +239,71 @@
   border-radius: 5px;
   cursor: pointer;
 }
-  
+
 .contact-card button:hover {
   background-color: #f1f1f1;
   color: #df1783;
 } 
    
    
+ /* Timeline Styling */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto;
+    padding-left: 30px;
+}
 
+.timeline-step {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #df1783;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.timeline-content {
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 6px;
+    border-left: 3px solid #df1783;
+}
+
+.timeline-content h4 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.timeline-content p {
+    margin: 5px 0;
+    color: #666;
+}
+
+/* Connector line between steps */
+.timeline-step:not(:last-child):after {
+    content: '';
+    position: absolute;
+    left: -35px;
+    top: 30px;
+    height: calc(100% + 30px);
+    width: 2px;
+    background: #ddd;
+}  
+   
+   
+   
  /* Ensure the video section has consistent width */
 #video {
     max-width: 100%;       /* Adjust if your layout has a max-width (e.g., 1200px) */
@@ -269,47 +332,80 @@
 }
 
 .download-btn:hover {
-    background: #a9298d;
+    background: #f1f1f1;
+    color: #df1783;
 }
 
 .download-btn svg {
     margin-left: 10px;
 }
  
+ 
 
-.timeline {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px 0;
-}
-.timeline-step {
-    display: flex;
-    margin-bottom: 30px;
-}
-.timeline-marker {
-    flex: 0 0 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: #3a86ff;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    margin-right: 20px;
-}
-.timeline-content {
-    flex: 1;
-    padding-top: 10px;
+
+.feature-group {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
 }
 
+.feature-group:last-child {
+  border-bottom: none;
+}
 
+.feature-list {
+  padding-left: 25px;
+}
 
-    
+.feature-list li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
 
+.disclaimer {
+  font-size: 0.8em;
+  color: #666;
+  font-weight: normal;
+}
 
-    
+.safeguards {
+  background: #f0f7ff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.safeguard-list {
+  list-style-type: none;
+  padding-left: 5px;
+}
+
+.safeguard-item {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.safeguard-item:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #4CAF50;
+  font-weight: bold;
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
       
     </style>
     </head>
@@ -319,19 +415,19 @@
             <div style="text-align: center;">
                 <img src="https://bucket.mlcdn.com/a/3336/3336910/images/5165da47eede5f06d2f185e3ad6100c67e2986df.gif" alt="Company Logo" style="width: 170px; margin-bottom: 20px;">
             </div>
-          <div>
             <h2>AI-Powered Automation: Agents & Standalone Systems</h2>
             <a href="#intro">• Intro</a>
             <a href="#features">• Core Features</a>
             <a href="#llm-showcase">• LLM Integrations</a>
             <a href="#usecases">• Use Cases</a>
-            <a href="#automation-suite">• Custom AI Agents</a>            
+<a href="#automation-suite">• Custom AI Agents</a>            
             <a href="#digicel">• Digicel Strategy</a>
             <a href="#video">• Explainer Video</a>
             <a href="#charts">• Statistics</a>
             <a href="#chat">• AI Assistant Demo</a>
             <a href="#contact">• Get in touch</a>
-        </div>
+     
+      
 <div class="nav-footer">
     Powered with ❤️ by <strong>Bebell Digital Solutions</strong><br>
     2025 © All rights reserved.
@@ -340,12 +436,8 @@
           
         </nav>
         
+ 
         
-        
-        
-        
-        
-           
         <div class="main-content">
             
             <section id="intro">
@@ -369,12 +461,12 @@
 </li>
 <li>Create future-ready systems that evolve with your business needs
 </li>
-</u>
+</ul><br>
 </div>
   <div>
   <button class="collapsible">🚀 Why It Matters</button>
   <div class="content">
-    <p>With 400+ integrations and AI capabilities, you can simplify automating complex workflows across telecom, support, finance, and IT ops — all while preserving data control.</p>
+    <p>With 400+ integrations and AI capabilities, you can simplify automating complex workflows across telecom, support, finance, and IT operations — all while preserving data control.</p>
   </div>
 
   <button class="collapsible">🧠 What Does It Do?</button>
@@ -384,7 +476,7 @@
       <li>Understand data (e.g., natural language, images, user behavior)</li>
       <li>Decide what to do next (based on rules, predictions, or learning)</li>
       <li>Act by performing automated tasks (send emails, reply to customers, generate reports, etc.)</li>
-    </ul>
+    </ul><br>
   </div>
   
   
@@ -396,25 +488,25 @@
   <ul>
     <li><strong>Examples:</strong> ChatGPT, OpenAI, Anthropic, Hugging Face, IBM Watson</li>
     <li><strong>Purpose:</strong> Understand inputs, make intelligent decisions, and generate human-like responses</li>
-  </ul>
+  </ul><br>
 
   <h3>2. Automation Platform</h3>
-  <ul>
+  <ul><br>
     <li><strong>Examples:</strong> n8n, Zapier, Make (Integromat), Albato</li>
     <li><strong>Purpose:</strong> Connect tools and execute workflows across platforms</li>
-  </ul>
+  </ul><br>
 
   <h3>3. Triggers and Actions</h3>
   <ul>
     <li><strong>Triggers:</strong> Events that start the automation (e.g., new email, message, order)</li>
     <li><strong>Actions:</strong> Tasks the system performs (e.g., send response, update CRM, generate invoice)</li>
-  </ul>
+  </ul><br>
 
   <h3>4. Memory / Database Layer</h3>
   <ul>
     <li><strong>Purpose:</strong> Stores history, logs, and context for smarter decisions</li>
     <li><strong>Examples:</strong> PostgreSQL, Redis, Airtable</li>
-  </ul>
+  </ul><br>
 
   <h3>5. Business Logic / Workflow Builder</h3>
   <ul>
@@ -422,15 +514,11 @@
   </ul>
   
   
-  
+  <br>
   </div>
   <br>
   
 </section>
-
-
-
-
 
 
 
@@ -444,15 +532,12 @@
                     <li>🔗 400+ SaaS/API connectors</li>
                     <li>🧠 Agent workflows with vector search</li>
                     <li>🔐 Self-hosted or managed cloud</li>
-                </ul>
+                </ul><br>
             </section>
             
             
-            
-            
-            
-            
-            
+       
+      
             
    <section id="llm-showcase">
   <h2>LLM Integrations</h2>
@@ -495,17 +580,13 @@
   
   
   <img src="https://bucket.mlcdn.com/a/3336/3336910/images/8934172fc538481f4e406e8c3f7eb76db72bd4c6.png" alt="Nvidia logo">
-  
 
   
   <img src="https://bucket.mlcdn.com/a/3336/3336910/images/6ca470f58e734f408f00a94ebc49fe05d38af9e0.png" alt="Grok AI logo">
   
  </div>
   <br> 
-  
-  
-  
-  
+ 
 </section>         
             
             
@@ -517,37 +598,39 @@
                 <button class="collapsible">Customer Support Automation</button>
                 <div class="content">
                     <p>Deploy WhatsApp bots that use GPT to answer questions, crawl FAQs, and maintain chat memory. Integrate with Twilio and Supabase.<br>For instance, integrate Twilio/WhatsApp with an LLM node so incoming customer messages trigger GPT-powered responses. An <strong>AI Automation System</strong> can crawl FAQs on demand and maintain chat history (e.g. via a Postgres/Supabase memory) . The WhatsApp bot template demonstrates this (“AI employee” bot that crawls web content for answers) . Automating routine queries deflects tickets and frees support agents for high‑value tasks.</p>
+                  <br>
                 </div>
 
                 <button class="collapsible">Billing & Finance Automation</button>
                 <div class="content">
                     <p>Create invoices from CRM actions. Send reminders automatically. Link with Stripe or Invoiced.<br>For example, when a new subscription is provisioned, an <strong>AI Automation System</strong> can automatically create an invoice (via Invoiced or Stripe), email it to the customer, and log the transaction in accounting software . It can also trigger payment reminders or credit‑hold notifications based on real-time data. These automations eliminate manual invoicing and reduce late payments.</p>
+                  <br>
                 </div>
 
                 <button class="collapsible">Churn Prediction</button>
                 <div class="content">
                     <p>Use AI/ML models to predict customer churn based on CRM and billing data. Launch retention flows automatically. An <strong>AI Automation System</strong> can periodically pull data (e.g. from billing, CRM, network usage), call a predictive service (Python code or a cloud ML API), and tag high-risk accounts for retention campaigns. <br>For instance, an AI node could score accounts by churn risk and then launch targeted offers. This tight integration ensures insights directly drive action.</p>
+                  <br>
                 </div>
                 
                 
    <button class="collapsible">Marketing Automation</button>
                 <div class="content">
                     <p>Personalize campaigns by syncing data across channels. A telecom could use an <strong>AI Automation System</strong> to pull subscriber data from the CRM, feed it to a Generative AI to craft tailored SMS/email content, and then schedule campaigns via a marketing platform (e.g. Mautic, SendGrid). Dropsolid’s case shows a similar pattern: they sync their Drupal CRM to Mautic to auto-generate segmented email campaigns . n8n can also write campaign metrics into dashboards (e.g. pushing Mautic reports to Google Sheets/DataStudio ) for real-time analytics.</p>
+                  <br>
                 </div>             
                 
                 
        <button class="collapsible">Internal IT Operations</button>
                 <div class="content">
                     <p>Automate employee and network workflows. For example, DeliveryHero used an AI automation workflow to handle account lockouts: when a manager approves a recovery request, the <strong>AI Automation System</strong> calls the Okta, Jira and Google APIs to unlock access. This cut the average unlock time from 35 to 20 minutes, saving ~200 work-hours per month . Similarly, Deda.<br>Tech built an <strong>AI Automation System</strong> workflow that listens for JSON messages on RabbitMQ and automates VMware server provisioning in their ITSM system . Telcos could do likewise for user onboarding, license assignment, network-alert ticketing, or any routine ops task.</p>
+                <br>
                 </div>  
-                
-                
-                
                 
                 
        <button class="collapsible">Content Creation & Distribution</button>
                 <div class="content">
-                    <p>AI automation streamlines the entire content creation process—generating text, images, and videos with minimal human input. It can write articles, social media posts, or scripts, design visuals, and even produce short videos using AI tools. <br>Once content is created, it’s automatically scheduled and distributed across multiple platforms (social media, blogs, newsletters, etc.) at the right time, ensuring consistency, speed, and brand alignment—without manual effort.</p>
+                    <p>AI automation streamlines the entire content creation process—generating text, images, and videos with minimal human input. It can write articles, social media posts, or scripts, design visuals, and even produce short videos using AI tools. <br>Once content is created, it’s automatically scheduled and distributed across multiple platforms (social media, blogs, newsletters, etc.) at the right time, ensuring consistency, speed, and brand alignment—without manual effort.</p><br>
                 </div>    
                 <br>
             </section>
@@ -570,6 +653,7 @@
       <li><strong>Visual Agent:</strong> Creates/edit images, infographics, and thumbnails.</li>
       <li><strong>Video Agent:</strong> Produces clips from text, adds auto-captions, and optimizes formats.</li>
     </ul>
+    <br>
   </div>
 
   <button class="collapsible">✍️ Content Team</button>
@@ -579,6 +663,7 @@
       <li><strong>SEO Editor:</strong> Optimizes all content for search algorithms.</li>
       <li><strong>Plagiarism Checker:</strong> Ensures 100% original output.</li>
     </ul>
+    <br>
   </div>
 
   <button class="collapsible">🎞️ Production Team</button>
@@ -588,6 +673,7 @@
       <li><strong>Transcriber Agent:</strong> Transforms audio/video into searchable text.</li>
       <li><strong>Scraper Agent:</strong> Gathers trends/data from approved sources.</li>
     </ul>
+    <br>
   </div>
 
   <button class="collapsible">🎉 Distribution Team</button>
@@ -597,6 +683,7 @@
       <li><strong>Crosspost Agent:</strong> Adapts assets for each platform automatically.</li>
       <li><strong>Analytics Agent:</strong> Tracks performance and suggests improvements.</li>
     </ul>
+    <br>
   </div>
 
   <button class="collapsible">📆 Administration Team</button>
@@ -606,6 +693,7 @@
       <li><strong>Email Agent:</strong> Handles triage, responses, and follow-ups.</li>
       <li><strong>Contact Agent:</strong> Maintains CRM updates and lead qualification.</li>
     </ul>
+    <br>
   </div>
 
   <button class="collapsible">🔄 Operations Team</button>
@@ -615,6 +703,7 @@
       <li><strong>API Connector:</strong> Maintains integrations between tools.</li>
       <li><strong>Compliance Watchdog:</strong> Ensures data/process regulations are met.</li>
     </ul>
+    <br>
   </div>
 
   <button class="collapsible">📊 Intelligence Team</button>
@@ -623,6 +712,7 @@
       <li><strong>Analytics Agent:</strong> Tracks content performance and suggests improvements.</li>
       <li><strong>Research Agent:</strong> Gathers market/competitor insights automatically.</li>
     </ul>
+    <br>
   </div>
 
   <button class="collapsible">🖥️ Marketing Team</button>
@@ -632,6 +722,7 @@
       <li><strong>Ad Optimizer:</strong> A/B tests creatives and targeting automatically.</li>
       <li><strong>Social Listening Agent:</strong> Tracks brand mentions and trends.</li>
     </ul>
+    <br>
   </div>
 
   <button class="collapsible">📞 Customer Service Team</button>
@@ -640,6 +731,7 @@
       <li><strong>Sentiment Analyst:</strong> Flags frustrated customers for human help.</li>
       <li><strong>Case Router:</strong> Triages tickets to the right department.</li>
     </ul>
+    <br>
   </div>
 
   <button class="collapsible">🔧 Technical Support Team</button>
@@ -649,6 +741,7 @@
       <li><strong>Documentation Bot:</strong> Updates knowledge bases from resolved tickets.</li>
       <li><strong>Patch Notifier:</strong> Alerts customers about critical updates.</li>
     </ul>
+    <br>
   </div>
 
   <button class="collapsible">👔 Executive Team</button>
@@ -658,6 +751,7 @@
       <li><strong>Competitor Intel Agent:</strong> Tracks rival moves with automated analysis.</li>
       <li><strong>Decision Simulator:</strong> Models outcomes for strategic choices.</li>
     </ul>
+    <br>
   </div>
 
   <button class="collapsible">🛍️ E-Commerce Team</button>
@@ -667,6 +761,7 @@
       <li><strong>Cart Rescue Bot:</strong> Automates abandoned cart sequences.</li>
       <li><strong>Product Tagging Agent:</strong> Auto-categorizes new inventory.</li>
     </ul>
+    <br>
   </div>
 
   <button class="collapsible">👥 HR & Talent Team</button>
@@ -676,6 +771,7 @@
       <li><strong>Onboarding Concierge:</strong> Guides new hires through paperwork.</li>
       <li><strong>Pulse Check Bot:</strong> Conducts automated employee surveys.</li>
     </ul>
+    <br>
   </div>
 
   <button class="collapsible">💸 Financial Ops Team</button>
@@ -685,6 +781,7 @@
       <li><strong>Expense Coach:</strong> Enforces policy compliance pre-submission.</li>
       <li><strong>Forecasting Agent:</strong> Predicts cash flow scenarios.</li>
     </ul>
+    <br>
   </div>
 
   <button class="collapsible">🎖️ Specialized Industry Team</button>
@@ -693,9 +790,45 @@
     <ul>
       <li><strong>HIPAA Complier:</strong> Auto-redacts PHI from documents.</li>
       <li><strong>Contract Analyzer:</strong> Highlights unusual clauses in agreements.</li>
-      <li><strong>Learning Adapter:</strong> Customizes training materials per student.</li>
+      <li><strong>Learning Adapter:</strong> Customizes training materials per student.</li> 
     </ul>
+    <br>
   </div>
+  
+  
+ 
+ <button class="collapsible">📝  Coaching & Wellbeing Agent Team
+</button>
+  <div class="content">
+    <p>For organizations investing in employee/customer wellness.
+</p>
+<h3>Performance Coaching Agents:</h3>
+    <ul>
+      <li><strong>1:1 Prep Bot:</strong> Prepares managers for coaching conversations with talking points</li>
+      <li><strong>Goal Tracker:</strong> Automates progress check-ins and milestone recognition</li>
+      <li><strong>Feedback Analyzer:</strong> Identifies development themes from 360 reviews.</li> 
+    </ul>
+    
+ <h3>Mental Wellbeing Support (Positioned as supplemental only):</h3>
+ <ul>
+      <li><strong>Burnout Radar:</strong> Flags workload patterns that risk employee health.</li>
+      <li><strong>Resource Guide:</strong> Recommends EAP programs or meditation tools.</li>
+      <li><strong>Check-in Bot:</strong> Optional daily mood tracking (with human escalation paths).</li> 
+    </ul>
+    
+    
+    
+<h3>Key Safeguards:</h3>
+ <ul>
+      <li>✅ Always includes "human in the loop" protocols.</li>
+      <li>✅ Focuses on prevention and resource navigation (not treatment)s.</li>
+      <li>✅ Complies with HIPAA/GDPR (data anonymization features).</li> 
+    </ul>     
+   <br> 
+    
+  </div> 
+
+  
   <br>
 </section>
  
@@ -710,7 +843,7 @@
                 <h2>📌 Implementation</h2>
                 
   
-                <p><strong>Partnership:</strong> Bebell Digital Solutions will design, build and deploy n8n-based workflows for any business's processes.</p>
+                <p><strong>Bebell Digital Solutions</strong>  will design, develop and deploy n8n automated workflows for any business's processes.</p>
                 
                <img src="https://cdn.shopify.com/s/files/1/0242/0175/6777/files/Untitled_design_5.gif?v=1748411959" 
        alt="AI Automation Architecture" 
@@ -754,10 +887,10 @@
                     <p><strong>Timeframe: 2-4 weeks</strong></p>
                     <p>We build, test, and deploy your solution.</p>
                 </div>
-           </div>
-
-              
-           <div class="timeline-step">
+            </div>
+            
+            
+             <div class="timeline-step">
         <div class="timeline-marker">5</div>
         <div class="timeline-content">
             <h4>Monitoring & Ongoing Support</h4>
@@ -766,8 +899,10 @@
         </div>
     </div>
             
-
-          
+            
+            
+            
+            
         </div>
     </div>     
                 
@@ -792,7 +927,8 @@
             
             
             
-                       
+            
+            
 <section id="video">
 <br>
     <h2>▶️ Explainer Video</h2>
@@ -851,12 +987,11 @@
   frameborder="0"
 ></iframe>
 
-
-<script>
+              <script>
   window.chatpilotConfig = {
     chatbotId: "dffeb15f02e54f87974a5a03fedae81a",
     domain: "https://asistente.chatterbot.support",
-    voiceModeOnly: true
+    
   }
 </script>
 <script
@@ -864,8 +999,8 @@
   charset="utf-8"
   defer
 ></script>
-       
-            </section>
+
+  </section>
             
            
            
@@ -878,7 +1013,7 @@
   <div class="contact-grid">
     
     <div class="contact-card">
-      <a href="https://example.com/contact">
+      <a href="https://bebelldigitalsolutions.com/pages/reservas">
         <img src="https://bucket.mlcdn.com/a/3336/3336910/images/1e0d8c458c32aac46effb74754011c5f6652e347.png" alt="Booking Icon" class="zoom-img">
       </a>
       <h3>Book a Call</h3>
@@ -905,17 +1040,10 @@
     </div>
 
   </div>
-  
-  
-  
-  
-  
 
-   
+   <p style="text-align: center;">Powered with 💖 by <strong>Bebell Digital Solutions</strong></p>
      
-     
-            
-            
+     <br>     
         </div>
         
 <script>
@@ -932,6 +1060,11 @@
       }
     });
   });
+
+
+
+
+  
 
   // Updated Chart
   const ctx = document.getElementById('useCaseChart');
@@ -986,8 +1119,10 @@
       }
     }
   });
+  
 </script>
 
+<br>
 
 
     </body>
