@@ -22,7 +22,20 @@
           padding: 20px;
           position: fixed;
           font-size: 18px;
+         overflow-y: auto; /* Add scrolling if needed */
          }
+
+
+    @media (max-width: 768px) {
+  nav {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .main-content {
+    margin-left: 0;
+  }
+}
 
       nav h2 {
           font-size: 38px;
@@ -241,8 +254,8 @@
 }
 
 .contact-card button:hover {
-  background-color: #f1f1f1;
-  color: #df1783;
+  background-color: #c6126f;
+  color: white;
 } 
    
    
@@ -306,25 +319,29 @@
    
  /* Ensure the video section has consistent width */
 #video {
-    max-width: 100%;       /* Adjust if your layout has a max-width (e.g., 1200px) */
-    width: 100%;          
-    padding: 0 20px;       /* Match your site's container padding */
-    box-sizing: border-box; /* Include padding in width calculation */
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  display: block;
+  background: transparent; /* Remove if unwanted */
 }
 
     
+/* ===== VIDEO SOLUTION ===== */
+.video-constraint {
+  width: 100%;
+  max-width: 1200px; /* Optional: Set your content max-width */
+  margin: 20px auto;
+}
 
-
-
-    
-/* ===== VIDEO RESPONSIVE FIX ===== */
 .responsive-video-wrapper {
   position: relative;
-  width: 100% !important;
-  padding-bottom: 56.25% !important; /* 16:9 ratio (change to 75% for 4:3) */
-  margin: 20px 0;
-  border-radius: 8px;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
   overflow: hidden;
+  border-radius: 8px;
+  background: #000; /* Optional: Shows while loading */
 }
 
 .responsive-video-wrapper iframe {
@@ -335,9 +352,6 @@
   height: 100%;
   border: none;
 }
-
-
-
 
 
     
@@ -362,8 +376,8 @@
 }
 
 .download-btn:hover {
-    background: #f1f1f1;
-    color: #df1783;
+    background: #c6126f;
+    color: white;
 }
 
 .download-btn svg {
@@ -426,10 +440,28 @@
  
  
  
+ /* 5. Add Mobile Styles */
+@media (max-width: 600px) {
+  .logo-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  iframe {
+    margin-top: 10px;
+  }
+}
  
  
- 
- 
+@media (max-width: 480px) {
+  .main-content {
+    padding: 20px 15px;
+  }
+  section {
+    padding: 15px;
+  }
+} 
  
  
  
@@ -446,7 +478,7 @@
                 <img src="https://bucket.mlcdn.com/a/3336/3336910/images/5165da47eede5f06d2f185e3ad6100c67e2986df.gif" alt="Company Logo" style="width: 170px; margin-bottom: 20px;">
             </div>
             <h2>AI-Powered Automation: Agents & Standalone Systems</h2>
-            <a href="#intro">• Intro 📍</a>
+            <a href="#intro">• Intro</a>
             <a href="#features">• Core Features</a>
             <a href="#llm-showcase">• LLM Integrations</a>
             <a href="#usecases">• Use Cases</a>
@@ -964,24 +996,21 @@
             
             
             
-            
-<section id="video">
-  <br>
+<section id="video" style="width: 100%; overflow: hidden;">
   <h2>▶️ Explainer Video</h2>
   
-  <!-- Updated Video Container -->
-  <div class="responsive-video-wrapper">
-    <iframe 
-      src="https://cdn.shopify.com/videos/c/o/v/84b27f42b333401294835716d2515fda.mp4" 
-      title="Explainer Video"
-      allowfullscreen
-      frameborder="0"
-      style="max-width: 100%; height: auto;" 
-      allow="fullscreen" 
-    ></iframe>
+  <!-- Video Container -->
+  <div class="video-constraint">
+    <div class="responsive-video-wrapper">
+      <iframe 
+        src="https://cdn.shopify.com/videos/c/o/v/84b27f42b333401294835716d2515fda.mp4" 
+        title="Explainer Video"
+        allowfullscreen
+        frameborder="0"
+        style="width: 100%; height: 100%;"
+      ></iframe>
+    </div>
   </div>
-
-  
   
   <!-- Download Button -->
   <a href="https://cdn.shopify.com/s/files/1/0242/0175/6777/files/Automation_Systems_Powered_by_Artificial_Intellige.pdf.pdf?v=1748495589" class="download-btn">
@@ -992,7 +1021,6 @@
       <line x1="12" y1="15" x2="12" y2="3"></line>
     </svg>
   </a>
-  <br>
 </section>
             
             
@@ -1082,7 +1110,7 @@
 
 
           
-
+<br>
    <p style="text-align: center;">Powered with 💖 by <strong>Bebell Digital Solutions</strong></p>
      
      <br>     
