@@ -1201,6 +1201,29 @@
       });
     }
 
+
+
+// Import the confetti library
+        import confetti from 'https://cdn.skypack.dev/canvas-confetti';
+        
+        // Trigger confetti when the page is loaded
+        window.onload = function() {
+            confetti({
+                particleCount: 1000,  // Number of confetti pieces
+                spread: 400,          // Spread of the confetti
+                origin: {
+                    x: 0.5,          // Horizontal center (50% of the screen)
+                    y: 0.5           // Vertical center (50% of the screen)
+                }
+            });
+        };
+
+
+
+
+
+	  
+
     // 3. Back-to-Top Widget - Improved Version
     const backToTop = document.createElement("div");
     backToTop.id = "back-to-top";
