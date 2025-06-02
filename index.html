@@ -17,14 +17,18 @@
       }
 
       nav {
-          width: 250px;
-          background: #df1783;
-          color: white;
-          height: 100vh;
-          padding: 20px;
-          position: fixed;
-          font-size: 18px;
-         }
+    width: 250px;
+    background: #df1783;
+    color: white;
+    min-height: 100vh; /* Changed from height to min-height */
+    padding: 20px;
+    position: fixed;
+    font-size: 18px;
+}
+
+
+
+
 
       nav h2 {
           font-size: 38px;
@@ -424,6 +428,31 @@
   font-weight: bold;
 }
  
+ 
+ 
+ 
+ 
+ 
+ /* Add a media query for mobile view */
+@media (max-width: 768px) {
+    nav {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+    
+    /* This ensures the pink background extends fully on mobile */
+    body {
+        flex-direction: column;
+    }
+}
+ 
+ 
+
  
  
  
@@ -1071,11 +1100,9 @@
 
 
 
-
           
-<br>
-   <p style="text-align: center;">Powered with 💖 by <strong>Bebell Digital Solutions</strong></p>
-     
+     <br>
+   <p style="text-align: center;">Powered with 💖 by <strong>Bebell Digital Solutions</strong></p>    
      <br>     
         </div>
 
