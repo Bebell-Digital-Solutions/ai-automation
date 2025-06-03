@@ -15,7 +15,7 @@
 	--title: "AI Automation Presentation";
 	--autor: "Bebell Digital Solutions";
 	--contact: "hola@bebelldigitalsolutions.com";
-	--description: "";
+	--description: "Research Study & Presentation for AI-Powered Automation Systems.";
 	--keywords: "";
 	--last-modified: "2025-06-01";
 	--content-language: "en";
@@ -449,7 +449,15 @@
  
  
  
- 
+#back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            cursor: pointer;
+        }
+
+	  
  
  
  /* Add a media query for mobile view */
@@ -1125,6 +1133,15 @@
 
 
 
+<!-- Widget Volver arriba -->
+<div id="back-to-top" onclick="scrollToTop()">
+    <img src="https://bucket.mlcdn.com/a/3336/3336910/images/29840e122b950f88fdca23072015101b427a9112.png" alt="Volver arriba" style="width: 40px; height: 40px;">
+</div>
+
+
+
+
+	    
 
 
 
@@ -1229,6 +1246,15 @@ document.head.appendChild(confettiScript);
       <img src="https://bucket.mlcdn.com/a/3336/3336910/images/29840e122b950f88fdca23072015101b427a9112.png" 
            alt="Back to Top" 
            style="width:40px;height:40px;">`;
+
+
+
+
+
+
+
+
+	  
     
     // Apply styles via CSS class (better practice)
     Object.assign(backToTop.style, {
